@@ -1,0 +1,391 @@
+body{
+  margin: 0;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.mainWrapper *:not(.id span, input, .create-ToDo button, .listItem, img, .drag-area){
+  display: flex;
+}
+body *{
+  font-family: 'Gloria Hallelujah', cursive;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+.wrapper{
+  margin-top: 100px;
+}
+input{
+  outline-color: transparent;
+}
+input:hover{
+  border: none;
+}
+.mainWrapper{
+  padding-top: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main{
+  background-color: white;
+  border: solid 1px grey;
+  border-radius: 20px;
+  margin-top: 10px;
+  flex-direction: column;
+  padding: 40px;
+  height: 100%;
+  width: 718px;
+  background-image: url(assets/background.svg);
+  background-size: 35px;
+}
+.main-head{
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+input{
+  width: 100%;
+  background-color: transparent;
+  color:rgb(140, 140, 140);
+}
+.mainName{
+  background-color: transparent;
+  border: none;
+  border-radius: 25px;
+  padding: 10px;
+  padding-left: 30px;
+  font-size: 40px;
+  color: #6B6B6B;
+}
+.mainName:hover, .mainName:focus{
+  border: none;
+  background-color: transparent;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  border-radius: 25px;
+  padding: 10px 10px 10px 30px;
+  font-size: 40px;
+  color: #6B6B6B;
+}
+.name{
+  padding: 10px;
+  font-size: 30px;
+}
+.id{
+  cursor: pointer;
+  color:gray;
+  align-items: center;
+  padding: 10px;
+}
+.info{
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.btns button, a{
+  text-decoration: none;
+  font-size: 15px;
+  color: black;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  cursor: pointer;
+}
+.btns{
+  align-items: center;
+}
+.create-ToDo>input{
+  font-family: 'Gloria Hallelujah', cursive;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 7px;
+  padding-left: 110px;
+  font-size: 28px;
+  color: rgb(140, 140, 140);
+  font-weight: 600;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  margin-top: 20px;
+}
+.create-ToDo>input::placeholder{
+  color: #CFCDCD;
+}
+.create-ToDo img{
+  position: relative;
+  top: -55px;
+  left: 35px;
+  width: 30px;
+  height: 30px;
+}
+.create-ToDo{
+  flex-direction: column;
+}
+.main-body{
+  flex-direction: column;
+}
+.listItem{
+  width: 100%;
+  border: none;
+  padding: 5px;
+}
+.listItem:hover{
+  border: none;
+
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  border-radius: 25px;
+  width: 100%;
+  padding: 5px;
+}
+.name>input{
+  width: 500px;
+  border-radius: 20px;
+  border:none;
+  font-size: 25px;
+}
+.checkBox{
+  width: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.create-ToDo button{
+  position: relative;
+  right: 40px;
+  border-radius: 10px;
+}
+.bar{
+  background-color: transparent;
+  padding: 20px;
+  padding-left: 35px;
+  border-radius: 20px;
+  justify-content: space-between;
+  cursor: pointer;
+  background-size: 1500px;
+}
+.bar img{
+  margin-right: 10px;
+}
+.arr-down{
+  margin-right: 20px;
+}
+.group{
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.completed{
+  flex-direction: column;
+  font-size: 25px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  border-radius: 25px;
+  color: #6B6B6B;
+  font-weight: 600;
+  background-color: transparent;
+  margin-top: 70px;
+}
+.share{
+  width: 30px;
+  height: 30px;
+}
+.pro{
+  width: 45px;
+  height: 33px;
+}
+.copyToDo{
+  width: 33px;
+  height: 33px;
+}
+.create{
+  width: 32px;
+  height: 32px;
+}
+.print{
+  width: 30px;
+  height: 30px;
+}
+.pro, .create, .copyToDo, .share, .print{
+  position: relative;
+  cursor: pointer;
+  margin-right: 30px;
+}
+.create img{
+  width: 33px;
+  height: 33px;
+  position: relative;
+  right: 37px;
+  top: 0px;
+}
+.deleteToDo{
+  cursor: pointer;
+  position: relative;
+  right: -37px;
+}
+.plug{
+  width: 51px;
+  height: 37px;
+}
+.cross{
+  text-decoration: line-through;
+}
+.arrowRotate{
+  transform: rotate(180deg);
+}
+.form{
+  background-image: url(assets/background.svg);
+  background-size: 35px;
+  border-radius: 20px;
+}
+.form form button{
+  margin-top: 80px;
+  width: 450px;
+  height: 82px;
+  border-radius: 25px;
+  border:none;
+  font-size: 28px;
+  font-weight: 600;
+  color: #6B6B6B;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  color: rgb(140, 140, 140);
+  font-family: 'Gloria Hallelujah', cursive;
+  padding: 20px;
+  background-color: white;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.copied{
+  display: flex;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  height: 80px;
+  justify-content: center;
+  position:fixed;
+  z-index: 99999;
+  bottom: 0px;
+  left: 44%;
+  flex-direction: column;
+}
+.over{
+  display: flex;
+}
+.close{
+  position: relative;
+  right: 10px;
+  cursor: pointer;
+}
+.sign{
+  padding: 20px;
+}
+.wrapperCreate{
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.title{
+  font-size: 50px;
+  font-weight: 600;
+  padding:50px;
+}
+form>div{
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+label{
+  font-size: 40px;
+  font-weight: 500;
+  margin:40px;
+}
+.inputCreate{
+  font-size: 30px;
+  font-weight: 600;
+  padding: 15px 10px;
+  padding-left: 30px;
+  background-color: white;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  width: 700px;
+}
+.inputCreate:focus{
+  font-size: 26px;
+  padding: 15px 10px;
+  padding-left: 30px;
+  background-color: white;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  width: 700px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.inputCreate::placeholder{
+  color: #CFCDCD;
+  font-family: 'Gloria Hallelujah';
+  font-weight: 400;
+}
+.formCreate{
+  border: 1px solid rgb(209, 209, 209);
+  padding:40px;
+  width: 800px;
+}
+.warn{
+  margin-top: 5px;
+  margin-bottom: -5px;
+  font-size: 12px;
+  color: red;
+  font-weight: 800;
+}
+.success{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(110, 110, 110, 0.445);
+}
+.imgCreate{
+  margin-bottom: 50px;
+  width: 280px;
+  height: 85px;
+}
+.uselessCheck{
+  position: relative;
+  left: 50px;
+}
+.createToDo::placeholder, .todo-input{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.todo-input{
+  font-size: 28px;
+  color: #8A8484;
+}
+.logo img{
+  height: 60px;
+  width: 200px;
+  margin-left: 20px;
+}
+.createContainer img{
+  position: relative;
+  width: 33px;
+  height: 33px;
+  top: -45px;
+  left: 740px;
+  cursor: pointer;
+}
+.createContainer{
+  display: flex;
+  flex-direction: column;
+}
+.drag-area{
+  font-size: 40px;
+  cursor: pointer;
+}

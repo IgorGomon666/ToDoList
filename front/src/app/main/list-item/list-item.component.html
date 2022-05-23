@@ -1,0 +1,12 @@
+<div class="listItem" [hidden]="hidden" [style]="style" (mouseenter)="hover(true)" (mouseleave)="hover(false)">
+  <div class="checkBox" (click)="checkChange(i)">
+    <div class="whichCheck" *ngIf="todo.checked[i]; else elseBlock"><img src="../../../assets/checked.svg"></div>
+    <ng-template #elseBlock><img src="../../../assets/check.svg"></ng-template>
+  </div>
+  <div class="name">
+    <input onfocus="this.value = this.value;" class="todo-input" *ngIf="whichCheck;else elseBlock1" class="todo-input" type="text" (keydown.enter)="keytab($event,'down',i)" (keydown.arrowdown)="keytab($event,'down',i)" (keydown.arrowup)="keytab($event,'up',i)" (input)="fieldChanger(i,$event)" [value]="todo.listItems[i][0]">
+    <ng-template #elseBlock1><input onfocus="this.value = this.value;" class="todo-input cross" type="text" (keydown.enter)="keytab($event,'down',i)" (keydown.arrowdown)="keytab($event,'down',i)" (keydown.arrowup)="keytab($event,'up',i)" (input)="fieldChanger(i,$event)" [value]="todo.listItems[i][0]"></ng-template>
+  </div>
+  <img class="deleteToDo" [hidden]="hoverState" src="../../../assets/delete.svg" (click)="deleteToDo(i)">
+</div>
+

@@ -1,0 +1,14 @@
+
+<div class="wrapperCreate wrapper">
+  <div class="formCreate form">
+    <form [formGroup]="createToDo" >
+      <div>
+        <img class="imgCreate" src="../../assets/logo.svg" alt="">
+        <input class="inputCreate" required type="text" formControlName="name" placeholder="Name" />
+      </div>
+      <button class="mainColor button" (click)="sendToDo()">Create list</button>
+    </form>
+  </div>
+</div>
+
+

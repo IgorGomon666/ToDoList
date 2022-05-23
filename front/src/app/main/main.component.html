@@ -1,0 +1,54 @@
+
+<div class="mainWrapper" [style]="proColor">
+  <div class="main" [style]="proColor">
+    <div class="main-head">
+      <div class="info">
+        <div class="hard">
+          <div class="logo">
+            <img src="../../assets/logo.svg" alt="">
+          </div>
+        </div>
+        <div class="btns">
+          <img class="share" (click)="share()" src="../../assets/shareArrow.svg" alt="">
+          <img class="copyToDo" (click)="copyToDoList()" src="../../assets/copy.svg" alt="">
+          <img class="create" (click)="createToDoList()" src="../../assets/create.svg" alt="">
+          <img class="print" (click)="print()" src="../../assets/print.svg" alt="">
+          <img *ngIf="proVal;else elseBlock3" (click)="pro()" class="pro" src="../../assets/proOn.svg" alt="">
+          <ng-template #elseBlock3><img (click)="pro()" class="pro" src="../../assets/pro.svg" alt=""></ng-template>
+        </div>
+      </div>
+    </div>
+    <div class="createContainer">
+      <input class="mainName"(keydown.enter)="keytab($event)"(keydown.arrowdown)="keytab($event)" (input)="nameChanger($event)" (mouseenter)="nameHover=false" (mouseleave)="nameHover=true" [style]="notFound" [value]="todoObj.name" type="text">
+    </div>
+    <div class="group">
+      <div class="main-body">
+        <app-list (changeToDoName)="ngOnInit()" [whichCheck]="true" [todo]="todoObj"[i]="i"[changeOrder]='changeOrder' *ngFor="let item of todoObj.listItems;let i = index"></app-list>
+        <div class="create-ToDo">
+          <input [style]="proColor" (keydown.enter)="createToDo()" type="text" (input)="onInput($event)" [value]="input" class="createToDo" placeholder="New ToDo">
+          <img class="uselessCheck" src="../../../assets/check.svg">
+        </div>
+      </div>
+      <div class="completed">
+        <div class="bar" (click)="hideCopm()">
+          <div class="completedin">Completed({{completed}})</div>
+          <img *ngIf="this.style == 'display:flex;';else elseBlock2" class="arrowRotate" src="../../assets/completedArrow.svg" alt="">
+          <ng-template #elseBlock2>
+            <img  src="../../assets/completedArrow.svg" alt="">
+          </ng-template>
+        </div>
+        <app-list (changeToDoName)="ngOnInit()" [style]="style" [whichCheck]="false" [todo]="todoObj"[i]="i"[changeOrder]='changeOrder' *ngFor="let item of todoObj.listItems;let i = index"></app-list>
+      </div>
+    </div>
+  </div>
+</div>
+<div [style]="proColor" class="filler"></div>
+<div class="hide" [hidden]="close">
+  <div class="copied" [style]="proColor">
+    <div class="over">
+      <div class="sign">Copied to Clipboard</div>
+      <div class="close" (click)="close=true">X</div>
+    </div>
+    <div [style]="progressBar"></div>
+  </div>
+</div>
